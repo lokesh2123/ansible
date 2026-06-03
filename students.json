@@ -1,0 +1,11 @@
+{
+    "students": [
+        {
+            "name": "lokesh",
+            "age": "29",
+            "city": "Tirupathi",
+            "state": "Andhra Pradesh",
+            "zip": "517102"
+        }
+    ]
+}

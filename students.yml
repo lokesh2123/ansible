@@ -3,6 +3,15 @@
   email : "lokesh@gmail.com"
   mobile : "9876543210"
   hosts : local
-  tasks : 
-    debug:
-    msg: " hello this is lokesh kommini"   
+  address : 
+  - type : permanent
+    street : "123 main st"
+    city : "hyderabad"
+    state : "telangana"
+    zip : "500001"
+
+  - type : temporary
+    street : "456 main st"
+    city : "hyderabad"
+    state : "telangana"
+    zip : "500002"
