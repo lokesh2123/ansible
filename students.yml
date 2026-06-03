@@ -1,0 +1,8 @@
+- name : "lokesh kommini"
+  dob : "23-08-1997"
+  email : "lokesh@gmail.com"
+  mobile : "9876543210"
+  hosts : local
+  tasks : 
+    debug:
+    msg: " hello this is lokesh kommini"   
