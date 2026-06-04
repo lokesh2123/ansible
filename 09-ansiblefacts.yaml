@@ -2,6 +2,9 @@
   hosts: frontend
   become: true
 
+  vars_files:
+    - variables.yaml
+
   tasks:
     - name: print the facts
       debug:
