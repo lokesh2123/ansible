@@ -18,4 +18,5 @@
     - name: "printing the all passing credentials"
       debug:
         msg: "the ansible username is {{ username }} and password is {{ passwd}}"
+        msg: "Successfully done"
       
