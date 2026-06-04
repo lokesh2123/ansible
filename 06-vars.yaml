@@ -1,4 +1,4 @@
-- name : passing the variables by using the vars_files 
+- name : passing the variables by using the  vars_files 
   hosts: all
   become: true
 
