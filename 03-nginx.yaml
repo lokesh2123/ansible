@@ -1,6 +1,8 @@
 - name: install nginx
-  hosts: all
+  hosts: frontend
   become: true
+  vars_files:
+    - variables.yaml
   tasks: 
     - name: install nginx server
       ansible.builtin.package:
@@ -8,17 +10,17 @@
         state: present
 
     - name: enable the nginx
-      systemctl:
+      service:
         name: nginx
         enabled: true
 
     - name: start nginx server
-      ansible.builtin.service:
+      service:
         name: nginx
         state: started
 
     - name: check the status of nginx
-      ansible.builtin.service:
+      service:
       systemctl:
         name: nginx
         state: status
