@@ -9,3 +9,7 @@
     - name: to pass the variables in cmd
       debug:
         msg: "my name is {{ name }}"
+
+
+
+        # ansible-playbook -i inventory.ini -e "name='lokesh'" 08-vars.yaml

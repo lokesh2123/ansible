@@ -19,4 +19,4 @@
       debug:
         msg: "the ansible username is {{ username }} and password is {{ passwd}}"
     
-      
+      # ansible-playbook -i inventory.ini 07-vars.yaml

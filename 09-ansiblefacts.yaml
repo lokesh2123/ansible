@@ -1,0 +1,8 @@
+- name: printing the ansible facts 
+  hosts: frontend
+  become: true
+
+  tasks:
+    - name: print the facts
+      debug:
+        msg: {{ ansible_facts }}
