@@ -13,5 +13,5 @@
 
     - name: save ansible facts locally
       copy:
-        content: "{{ ansible_facts }}"
+        sourse: ansible_facts
         dest: /tmp/output.txt
