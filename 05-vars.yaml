@@ -2,6 +2,9 @@
   hosts: all
   become: true
 
+  vars_files:
+    - variables.yaml
+
   vars:
     NAME: "Lokesh"
     ROLE: "DevOps Engineer"
@@ -10,6 +13,6 @@
   tasks:
     - name: print the varibles and test it
       vars:
-        NAME: "Ansible" 
+        NAME: "task level variable" 
       debug:
         msg: "my name is {{ NAME }} and im learnig {{ ROLE}} and role number is {{ NUMBER }}"
