@@ -17,7 +17,6 @@
   tasks:
     - name: "printing the all passing credentials"
       debug:
-      loop:
-        - msg: "the ansible username is {{ username }} and password is {{ passwd}}"
-        - msg: "Successfully done"
+        msg: "the ansible username is {{ username }} and password is {{ passwd}}"
+    
       

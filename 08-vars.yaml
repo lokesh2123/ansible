@@ -2,8 +2,10 @@
   hosts: all
   become: true
 
+  vars_files:
+    - variables.yaml
+
   tasks:
     - name: to pass the variables in cmd
-      ping:
       debug:
         msg: "my name is {{ name }}"
