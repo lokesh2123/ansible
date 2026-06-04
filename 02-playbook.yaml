@@ -1,5 +1,5 @@
 - name: printing the sample message using debug
-  hosts: localhost
+  hosts: frontend
   tasks:
     - name: print the message
       debug:
