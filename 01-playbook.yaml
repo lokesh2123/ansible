@@ -3,4 +3,5 @@
   tasks:
     - name: ping the server
       ping:
+      debug:
         msg: "this is executed by Lokesh"
