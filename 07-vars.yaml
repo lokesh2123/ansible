@@ -16,7 +16,6 @@
 
   tasks:
     - name: "printing the all passing credentials"
-      vars:
       debug:
-      -  msg: "the ansible username is {{ username }} and password is {{ passwd}}"
-      -  msg: "Welcome to Ansible"
+        msg: "the ansible username is {{ username }} and password is {{ passwd}}"
+      
