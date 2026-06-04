@@ -9,3 +9,9 @@
     - name: print the facts
       debug:
         msg: "{{ ansible_facts | output.txt }}"
+
+        
+- name: save ansible facts locally
+  copy:
+    content: "{{ ansible_facts }}"
+    dest: /tmp/output.txt
