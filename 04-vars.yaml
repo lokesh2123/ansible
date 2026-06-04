@@ -2,6 +2,9 @@
   hosts: all
   become: true
 
+  vars_files:
+    - variables.yaml
+
   vars:
     NAME: "Ansible"
     ROLE: "DevOps Engineer"
