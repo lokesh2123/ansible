@@ -13,7 +13,10 @@
     - name: passwd
       prompt: "enter the ansible passwd"
       private: yes
+
   tasks:
-    debug:
-      msg: "the ansible username is {{ username }}, and password is {{ passwd }}"
-       
+    - name: "printing the all passing credentials"
+      vars:
+      debug:
+      -  msg: "the ansible username is {{ username }} and password is {{ passwd}}"
+      -  msg: "Welcome to Ansible"
