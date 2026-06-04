@@ -15,5 +15,5 @@
       private: yes
   tasks:
     debug:
-      msg: "the ansible username is {{ username }} and password is {{ passwd }}"
+      msg: "the ansible username is {{ username }}, and password is {{ passwd }}"
        
