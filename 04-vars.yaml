@@ -1,0 +1,13 @@
+- name: declaring the variables
+  hosts: all
+  become: true
+
+  vars:
+    NAME: "Ansible"
+    ROLE: "DevOps Engineer"
+    NUMBER: 10
+    EXP: 6
+  tasks:
+    - name: print the variables
+      debug:
+      msg: "my name is {{ NAME }} and im learnig {{ ROLE}} and my experience is {{ EXP }} and role number is {{ NUMBER }}"

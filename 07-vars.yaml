@@ -1,0 +1,18 @@
+- name: passing the variables by using the prompt 
+  hosts: all
+  become: true
+
+  vars_prompt:
+    - name: username
+      prompt: "enter the ansible username"
+      private: no
+
+    - name: passwd
+      prompt: "enter the ansible passwd"
+      private: yes
+
+  tasks:
+    - name : printing the all passing credentials"
+      debug:
+      -  msg: "the ansible username is {{ username }} and password is {{ passwd}}"
+      -  msg: "Welcome to Ansible"

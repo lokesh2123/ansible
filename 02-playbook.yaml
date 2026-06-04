@@ -1,0 +1,6 @@
+- name: printing the sample message using debug
+  hosts: localhost
+  tasks:
+    - name: print the message
+      debug:
+        msg: "this is my first ansible script to run in the yaml file"

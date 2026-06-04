@@ -1,0 +1,15 @@
+- name: pass the variable in the inside loop
+  hosts: all
+  become: true
+
+  vars:
+    NAME: "Lokesh"
+    ROLE: "DevOps Engineer"
+    NUMBER: 10
+
+  tasks:
+    - name: print the varibles and test it
+      vars:
+        NAME: "Ansible" 
+      debug:
+        msg: "my name is {{ NAME }} and im learnig {{ ROLE}} and role number is {{ NUMBER }}"

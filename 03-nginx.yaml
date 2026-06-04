@@ -1,0 +1,25 @@
+- name: install nginx
+  hosts: all
+  become: true
+  tasks: 
+    - name: install nginx server
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: enable the nginx
+      systemctl:
+        name: nginx
+        enabled: true
+
+    - name: start nginx server
+      ansible.builtin.service:
+        name: nginx
+        state: started
+
+    - name: check the status of nginx
+      ansible.builtin.service:
+      systemctl:
+        name: nginx
+        state: status
+

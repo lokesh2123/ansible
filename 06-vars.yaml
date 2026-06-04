@@ -1,0 +1,11 @@
+- name : passing the variables by using the vars_files 
+  hosts: all
+  become: true
+
+  vars_files:
+    - variables.yaml
+
+  tasks:
+    - name: we are using the vars_file 
+      debug:
+        msg: "my name is {{ NAME }} and im learnig {{ ROLE}} and my experience is {{ EXP }} and role number is {{ NUMBER }}"

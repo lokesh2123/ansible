@@ -1,0 +1,9 @@
+- name: to pass the variables by using the CMD
+  hosts: all
+  become: true
+
+  tasks:
+    - name: to pass the variables in cmd
+      ping:
+      debug:
+        msg: "my name is {{ name }}"
