@@ -21,7 +21,6 @@
 
     - name: check the status of nginx
       service:
-      systemctl:
         name: nginx
         state: status
 
