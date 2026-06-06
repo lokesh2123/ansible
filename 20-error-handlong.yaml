@@ -1,0 +1,11 @@
+- namme: error handling
+  hosts: localhost
+  become: true
+
+  vars_files:
+    - variables.yaml
+  
+  tasks:
+  - name: check the user output
+  register: user_output
+  command: {{ user_output }}
