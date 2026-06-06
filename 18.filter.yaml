@@ -4,10 +4,11 @@
 
   vars_files:
     - variables.yaml
-
-  full_name: Lokesh Kumar
+  
+    
 
   vars:
+    full_name: Lokesh Kumar
     topics: apple, banana, orange, graps
 
     tagMap:
