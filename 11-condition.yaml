@@ -6,7 +6,7 @@
     - variables.yaml
 
   vars_prompt:
-    name: NAME
+    name: distribution_name
     prompt: "enter the server distribution :" 
     private: no
 
@@ -14,5 +14,5 @@
   tasks:
     - name: check the which distribution for this server 
       debug:
-        msg: "the given distribution is {{ NAME }}"
-      when: name == {{ name }}
+        msg: "the given distribution is {{ distribution_name }}"
+      when: name == "Redhat"
