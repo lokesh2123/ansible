@@ -5,8 +5,13 @@
   vars_files:
     - variables.yaml
 
-  vars: 
-    number: 10
+  vars_prompts:
+    - name: number
+      prompt: "enter the number to check even or odd :"
+      private: no
+
+  # vars: 
+  #   number: 10
   
   tasks:
     - name: check the number is even or odd
