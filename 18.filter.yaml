@@ -56,6 +56,10 @@
     debug:
       msg: "{{ topics.upper() }}"
 
-  - name: convert to uppercase 
+  - name: other method using pipe to convert to uppercase 
     debug:
       msg: "{{ full_name | upper }}"
+
+  - name: print the ip address of the host
+    debug:
+      msg: "The host IP is {{ ansible_default_ipv4.address }}"
