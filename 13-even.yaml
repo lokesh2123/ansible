@@ -6,7 +6,7 @@
     - variables.yaml
 
   vars_prompt:
-    - name: number
+      name: number
       prompt: "enter the number to check even or odd :"
       private: no
 
