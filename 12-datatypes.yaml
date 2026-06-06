@@ -11,9 +11,9 @@
     live: true # this is boolean
 
     topics:   # lsit 
-      - string
-      - number
-      - boolean
+      - apple
+      - banana
+      - graps
 
     more_details:  #dictionary
       name: "mahesh warrier"
