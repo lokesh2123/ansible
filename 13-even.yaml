@@ -7,7 +7,7 @@
 
   vars_prompt:
     - number: value
-      prompt: "enter the number to check even or odd :"
+      prompt: "enter the number to check even or odd : {{ number }}"
       private: no
 
   # vars: 
