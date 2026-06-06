@@ -8,9 +8,11 @@
   tasks:
   - name: check the id 
     command: id roboshop
+    register: user_output
     ignore_error: true
-    
+
   - name: create user 
     command: useradd roboshop
+    when: user_output.rc ! = 0
 
 
