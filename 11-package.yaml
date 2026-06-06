@@ -7,10 +7,11 @@
 
   vars:
     NAME: "Redhat"
+
   when: NAME == "Redhat"
 
 
   tasks:
-    - name: ccheck the which distribution for this server 
+    - name: check the which distribution for this server 
       debug:
-        msg: "{{ ansible_distribution }}"
+        msg: "{{ ansible_distribution.NAME }}"
