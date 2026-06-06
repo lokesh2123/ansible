@@ -8,4 +8,4 @@
   tasks:
   - name: check the user output
     register: user_output
-    command: {{ user_output }}
+    command: id roboshop
