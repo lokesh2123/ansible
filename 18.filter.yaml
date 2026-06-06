@@ -15,4 +15,4 @@
 
   - name: print the default message
     debug:
-      msg: "The port is {{ app_port | default(8080) }}"
+      msg: "Hello, welcome Lokesh {{ message | default(Good Morning) }}"
