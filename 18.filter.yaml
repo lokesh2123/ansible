@@ -16,3 +16,7 @@
   - name: print the default message
     debug:
       msg: "Hello, welcome Lokesh {{ message | default('Good Morning') }}"
+
+  - name: convert map to list 
+    debug: 
+      msg: "{{ topics | dict2items }}"
