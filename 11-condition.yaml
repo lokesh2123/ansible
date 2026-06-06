@@ -5,14 +5,11 @@
   vars_files:
     - variables.yaml
 
-  vars_prompt:
-    name: distribution_name
-    prompt: "enter the server distribution :" 
-    private: no
+  data: facts.json
 
   
   tasks:
     - name: check the which distribution for this server 
       debug:
         msg: "the given distribution is {{distribution.name }}"
-      when: distribution_name == "Redhat"
+      when: facts.json.distribution == "Redhat"
