@@ -1,5 +1,5 @@
 - name: even or add
-  host: localhost
+  hosts: localhost
   become: true
 
   vars_files:
