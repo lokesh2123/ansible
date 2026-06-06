@@ -17,11 +17,11 @@
     - name: check the {{ number }} is even or odd
       debug:
         msg: "the given number {{ number }} is even"
-        when: number % 2 == 0
+      when: number % 2 == 0
 
     - name: check the {{ number }} is even or odd
       debug:
         msg: "the given number {{ number }} is odd"
-        when: number % 2 != 0
+      when: number % 2 != 0
 
   
