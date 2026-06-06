@@ -13,6 +13,7 @@
       banana: fruit
       orange: fruit
       graps: fruit
+
     full_name: lokesh kumar
 
     tagList: [
@@ -57,4 +58,4 @@
 
   - name: convert to uppercase 
     debug:
-      msg: "{{ full_name.uppercase }}"
+      msg: "{{ full_name | uppercase }}"
