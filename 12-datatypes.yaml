@@ -24,7 +24,7 @@
     - name: print the string variable
       debug:
         msg:
-          -  name: "{{ name }}"
+          - name: "{{ name }}"
           - number: "{{ number }}"
           - live: "{{ live }}"
           - topics: "{{ topics }}"
