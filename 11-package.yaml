@@ -10,10 +10,11 @@
     prompt: enter the server distribution
     private: no
 
-  when: NAME == "Redhat"
+  
 
 
   tasks:
     - name: check the which distribution for this server 
       debug:
         msg: "{{ ansible_distribution}}"
+      when: NAME == "Redhat"
