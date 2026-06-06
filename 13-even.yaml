@@ -18,10 +18,10 @@
     - name: even
       debug:
         msg: "the given number {{ number }} is even"
-      when: number % 2 == 0
+      when: number | int % 2 == 0
 
     - name: odd
       debug:
         msg: "the given number {{ number }} is odd"
-      when: number % 2 != 0
+      when: number | int % 2 != 0
   
