@@ -49,3 +49,7 @@
   - name: convert list to map 
     debug:
       msg: "{{ tagList | items2dict }}"
+
+  - name: convert to uppercase 
+    debug:
+      msg: "{{ topics.upper() }}"
