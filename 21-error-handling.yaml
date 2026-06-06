@@ -6,6 +6,11 @@
     - variables.yaml
   
   tasks:
-    - name: check the id 
-      command: id roboshop
+  - name: check the id 
+    command: id roboshop
+    ignore_error: true
+    
+  - name: create user 
+    command: useradd roboshop
+
 
