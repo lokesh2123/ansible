@@ -1,7 +1,6 @@
 - name: idempoyency example
   hosts: localhost
   become: yes
-  connections: true
 
   vars_files:
     - variables.yaml
