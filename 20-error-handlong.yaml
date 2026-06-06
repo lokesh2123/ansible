@@ -1,6 +1,6 @@
 - namme: error handling
   hosts: localhost
-  become: true
+  become: yes
 
   vars_files:
     - variables.yaml
