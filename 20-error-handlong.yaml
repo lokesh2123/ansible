@@ -7,5 +7,4 @@
   
   tasks:
   - name: check the user output
-    register: user_output
     command: id roboshop
