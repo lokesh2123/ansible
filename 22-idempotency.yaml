@@ -7,5 +7,5 @@
   
   tasks:
   - name: create user
-  user:
-    name: lokesh
+    user:
+      name: lokesh
