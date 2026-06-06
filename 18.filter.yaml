@@ -14,6 +14,25 @@
       orange: fruit
       graps: fruit
 
+    tagList: [
+        {
+            "key": "apple",
+            "value": "fruit"
+        },
+        {
+            "key": "banana",
+            "value": "fruit"
+        },
+        {
+            "key": "orange",
+            "value": "fruit"
+        },
+        {
+            "key": "graps",
+            "value": "fruit"
+        }
+    ]
+
   tasks:
   - name: printing the topics
     debug:
@@ -26,3 +45,7 @@
   - name: convert map to list 
     debug: 
       msg: "{{ tagMap | dict2items }}"
+
+  - name: convert list to map 
+    debug:
+      msg: "{{ tagList | dict2items }}"
