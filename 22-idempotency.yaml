@@ -6,6 +6,6 @@
     - variables.yaml
   
   tasks:
-  - name: create user
+  - name: create user to server
     user:
       name: lokesh
