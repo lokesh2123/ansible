@@ -1,10 +1,9 @@
 - name: provisioning the infrastructure
   hosts: local
-  become: yes
-  connections: true
+  connections: local
 
   vars:
-    instances: ["mongodb","redis","rabitmq","mysqldb"]
+    instances: ["mongodb"," redis"," rabitmq"," mysqldb"]
     image_id: ami-0220d79f3f480ecf5
 
   tasks:
