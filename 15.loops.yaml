@@ -9,7 +9,7 @@
   - name: print the names
     debug:
       msg: "Hi {{ item }}"
-    loops:
+    loop:
       - lokesh
       - mahesh
       - ramesh
