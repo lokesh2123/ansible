@@ -11,10 +11,8 @@
     private: no
 
   
-
-
   tasks:
     - name: check the which distribution for this server 
       when: NAME == "Redhat"
       debug:
-        msg: "{{ ansible_distribution}}"
+        msg: "{{ ansible_distribution.NAME }}"
