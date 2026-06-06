@@ -1,0 +1,13 @@
+- name: installing the packages
+  hosts: localhost
+  become: true
+
+  tasks:
+  - name: installing the packages
+    package:
+      name: "{{ item }} "
+      state: present
+    loop:
+      - nginx
+      - http
+      - unzip
