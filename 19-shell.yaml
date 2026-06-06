@@ -7,4 +7,5 @@
   
   tasks:
   - name: check the cmd or shell
-    shell: cat /etc/passwd | grep ec2-user
+    #shell: cat /etc/passwd | grep ec2-user
+    command: cat /etc/passwd | grep ec2-user
