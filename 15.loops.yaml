@@ -1,0 +1,14 @@
+- name: print the names using loop
+  hosts: localhost
+  become: true
+
+  vars_files:
+    - variables.yaml
+  tasks:
+    - name: print the names
+      debug:
+        msg: " Hi {{ item }}"
+  loops:
+    - lokesh
+    - mahesh
+    - ramesh
