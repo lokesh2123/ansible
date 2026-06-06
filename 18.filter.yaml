@@ -1,0 +1,14 @@
+- name: filter the topics using the topics
+  hosts: localhost
+  become: true
+
+  vars_files:
+    - variables.yaml
+
+  vars:
+    topics: apple, banana, orange, graps
+
+  tasks:
+  - name: printing the topics
+    debug:
+      msg: "the topics are {{ topics.split(',') }}" 
