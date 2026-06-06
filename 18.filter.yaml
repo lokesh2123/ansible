@@ -5,6 +5,8 @@
   vars_files:
     - variables.yaml
 
+  full_name: Lokesh Kumar
+
   vars:
     topics: apple, banana, orange, graps
 
@@ -56,4 +58,4 @@
 
   - name: convert to uppercase 
     debug:
-      msg: "{{ topics | uppercase }}"
+      msg: "{{ full_name | uppercase }}"
