@@ -7,3 +7,6 @@ We can install the package on another server using the command below
 We can start the service by using below command 
 ------>  ansible all -i 172.31.42.46, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
 
+install the python 
+
+pip3.9 install boto3 botocore
