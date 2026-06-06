@@ -1,0 +1,11 @@
+- name: check the distribution of the server
+  hosts: localhost
+  become: true
+
+  vars_files:
+    - variables.yaml
+
+  tasks:
+    - name: ccheck the which distribution for this server 
+      debug:
+        msg: "{{ ansible_distribution }}"
