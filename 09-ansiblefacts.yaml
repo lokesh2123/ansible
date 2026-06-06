@@ -8,10 +8,4 @@
   tasks:
     - name: print the facts
       debug:
-        msg: "{{ ansible_facts | output.txt }}"
-
-
-    - name: save ansible facts locally
-      copy:
-        sourse: ansible_facts
-        dest: /tmp/output.txt
+        msg: "{{ ansible_facts }}"
