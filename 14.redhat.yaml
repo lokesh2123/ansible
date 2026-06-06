@@ -5,10 +5,10 @@
   tasks:
   - name: gathering facts for distribution
     debug:
-      msg: this is redhat family need to run as dnf package manager
-    when: ansible_local.os_family == "Redhat"
+      msg: need to run as dnf package manager
+    when: ansible_facts.os_family == "Redhat"
 
   - name: gathering facts for distribution of the server
     debug:
-      msg: this is debian family need to run as apt package manager
-    when: ansible_local.os_family == "Debian"
+      msg:  need to run as apt package manager
+    when: ansible_facts.os_family == "Debian"
