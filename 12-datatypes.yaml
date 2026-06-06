@@ -10,14 +10,14 @@
     number: 10 # this is number
     live: true # this is boolean
 
-  topics:   # lsit 
-    - string
-    - number
-    - boolean
+    topics:   # lsit 
+      - string
+      - number
+      - boolean
 
-  more_details:  #dictionary
-    name: "mahesh warrier"
-    role: "DevOps Engineer"
+    more_details:  #dictionary
+      name: "mahesh warrier"
+      role: "DevOps Engineer"
 
 
   tasks:
