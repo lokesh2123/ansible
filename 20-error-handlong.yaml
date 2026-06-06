@@ -12,6 +12,6 @@
 
   - name: print
     debug:
-      msg: {{ users_output }}
+      msg: "{{ users_output }}"
 
     #command: id roboshop
