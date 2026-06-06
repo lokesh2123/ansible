@@ -15,4 +15,4 @@
     - name: check the which distribution for this server 
       debug:
         msg: "the given distribution is {{ NAME }}"
-      when: NAME == {{ name }}
+      when: name == {{ name }}
