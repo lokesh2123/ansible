@@ -1,0 +1,19 @@
+- name: printing the data type variables
+  hosts: localhost
+  become: true
+
+  vars_files:
+    - variables.yaml
+
+  vars:
+    name: "this is Lokesh Kommini" # this is string
+    number: 10 # this is number
+    live: true # this is boolean
+  
+  tasks:
+    - name: print the string variable
+      debug:
+        msg:
+          - name: "{{ name }}"
+          - number: "{{ number }}"
+          - live: "{{ live }}"
