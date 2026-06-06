@@ -1,0 +1,11 @@
+- name: error handling
+  hosts: localhost
+  become: yes
+
+  vars_files:
+    - variables.yaml
+  
+  tasks:
+    - name: check the id 
+      command: id roboshop
+
