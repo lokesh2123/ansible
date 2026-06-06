@@ -1,6 +1,10 @@
 - name : gathering facts
   hosts: all
   become: true
+
+  vars_files:
+    - vars.yaml
+
   tasks:
     - name: gathering the facts from the server
       debug:
