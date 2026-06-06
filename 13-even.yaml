@@ -6,7 +6,7 @@
     - variables.yaml
 
   vars_prompt:
-      name: number
+    - name: number
       prompt: "enter the number to check even or odd :"
       private: no
 
@@ -14,14 +14,14 @@
   #   number: 10
   
   tasks:
-    - name: check the {{ name }} is even or odd
+    - name: check the {{ number }} is even or odd
       debug:
-        msg: "the given number {{ name }} is even"
+        msg: "the given number {{ number }} is even"
         when: number % 2 == 0
 
-    - name: check the {{ name }} is even or odd
+    - name: check the {{ number }} is even or odd
       debug:
-        msg: "the given number {{ name }} is odd"
+        msg: "the given number {{ number }} is odd"
         when: number % 2 != 0
 
   
