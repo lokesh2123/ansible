@@ -12,3 +12,7 @@
   - name: printing the topics
     debug:
       msg: "the topics are {{ topics.split(',') }}" 
+
+  - name: print the default message
+    debug:
+      msg: "The port is {{ app_port | default(8080) }}"
