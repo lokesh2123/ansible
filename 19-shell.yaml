@@ -1,11 +1,10 @@
 - name: check the shell or command 
   hosts: localhost
   become: true
-  connections: true
 
   vars_files:
     - variables.yaml
   
   tasks:
   - name: check the cmd or shell
-    shell: ps -ef | grep ec2-user
+    shell: cat /etc/passwd | grep ec2-user
