@@ -7,7 +7,9 @@
   
   tasks:
   - name: check the user output
+    command: ls -ltr
     register: users_output
+
   - name: print
     debug:
       msg: {{ users_output }}
