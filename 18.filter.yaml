@@ -53,3 +53,7 @@
   - name: convert to uppercase 
     debug:
       msg: "{{ topics.upper() }}"
+
+  - name: convert to uppercase 
+    debug:
+      msg: "{{ topics | uppercase }}"
