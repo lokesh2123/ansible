@@ -8,6 +8,12 @@
   vars:
     topics: apple, banana, orange, graps
 
+    tagMap:
+      apple: fruit
+      banana: fruit
+      orange: fruit
+      graps: fruit
+
   tasks:
   - name: printing the topics
     debug:
@@ -19,4 +25,4 @@
 
   - name: convert map to list 
     debug: 
-      msg: "{{ topics | dict2items }}"
+      msg: "{{ tagMap | dict2items }}"
