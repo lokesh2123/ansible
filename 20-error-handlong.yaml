@@ -7,9 +7,9 @@
   
   tasks:
   - name: check the user output
-    register: user_output
+    register: users_output
   - name: print
     debug:
-      msg: {{ user_output }}
+      msg: {{ users_output }}
 
     #command: id roboshop
