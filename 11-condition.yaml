@@ -5,9 +5,9 @@
   vars_files:
     - variables.yaml
 
-  data: facts.json
+  vars:
+    distribution: "{{ facts.json.distribution }}"
 
-  
   tasks:
     - name: check the which distribution for this server 
       debug:
