@@ -8,4 +8,4 @@
   
   tasks:
   - name: check the cmd or shell
-    command: ps -ef | grep ec2-user
+    shell: ps -ef | grep ec2-user
