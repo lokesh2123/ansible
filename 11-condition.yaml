@@ -7,12 +7,12 @@
 
   vars_prompt:
   - name: NAME
-    prompt: enter the server distribution
+    prompt: "enter the server distribution :" 
     private: no
 
   
   tasks:
     - name: check the which distribution for this server 
-      when: NAME == "Redhat"
       debug:
-        msg: "{{ NAME }}"
+        msg: "the given distribution is {{ NAME }}"
+      when: NAME == "Redhat"
