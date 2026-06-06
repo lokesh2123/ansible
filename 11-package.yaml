@@ -5,6 +5,11 @@
   vars_files:
     - variables.yaml
 
+  vars:
+    NAME: "{{ NAME}}"
+  when: NAME == "Redhat"
+
+
   tasks:
     - name: ccheck the which distribution for this server 
       debug:
