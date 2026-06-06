@@ -4,11 +4,13 @@
 
   vars_files:
     - variables.yaml
+
   tasks:
     - name: print the names
       debug:
         msg: " Hi {{ item }}"
-  loops:
-    - lokesh
-    - mahesh
-    - ramesh
+      
+      loops:
+        - lokesh
+        - mahesh
+        - ramesh
