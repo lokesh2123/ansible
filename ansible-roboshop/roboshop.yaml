@@ -1,0 +1,28 @@
+- name: provisioning the infrastructure
+  hosts: localhost
+  become: yes
+  connections: true
+
+  vars:
+    instances: ["mongodb","redis","rabitmq","mysqldb"]
+    image_id: ami-0220d79f3f480ecf5
+
+  tasks:
+  - name: creating the instances
+    amazon.aws.ec2_instance:
+      name: robo-"{{ item }}"
+      instance_type: t3.micro
+      security_groups:
+        - robo-"{{ instance}}"
+        - robo-common
+      image_id: "{{ image_id }}"
+    loop: "{{ instances }}"
+    register: ec2_output
+
+  - name: print
+    debug:
+      msg: {{ ec2_output }}
+      
+
+
+  
