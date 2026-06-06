@@ -12,7 +12,7 @@
       name: robo-"{{ item }}"
       instance_type: t3.micro
       security_groups:
-        - robo-"{{ instance }}"
+        - "robo-{{ item }}"
         - robo-common
       image_id: "{{ image_id }}"
     loop: "{{ instances }}"
