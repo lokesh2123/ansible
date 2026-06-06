@@ -1,5 +1,4 @@
-[localhost] => {
-    "msg": {
+    {
         "all_ipv4_addresses": [
             "172.31.44.174"
         ],
@@ -1016,4 +1015,3 @@
         "virtualization_tech_host": [],
         "virtualization_type": "kvm"
     }
-}
