@@ -9,7 +9,7 @@
   tasks:
   - name: creating the instances
     amazon.aws.ec2_instance:
-      name: robo-"{{ item }}"
+      name: "robo-{{ item }}"
       instance_type: t3.micro
       security_groups:
         - "robo-{{ item }}"
