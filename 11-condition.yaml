@@ -14,5 +14,5 @@
   tasks:
     - name: check the which distribution for this server 
       debug:
-        msg: "the given distribution is {{ name }}"
-      when: name == "Redhat"
+        msg: "the given distribution is {{distribution.name }}"
+      when: distribution_name == "Redhat"
