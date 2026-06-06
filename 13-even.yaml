@@ -17,11 +17,11 @@
   tasks:
     - name: even
       debug:
-        msg: "the given number {{ number }} is even"
+        msg: "the given number {{ name }} is even"
       when: number | int % 2 == 0
 
     - name: odd
       debug:
-        msg: "the given number {{ number }} is odd"
+        msg: "the given number {{ name }} is odd"
       when: number | int % 2 != 0
   
