@@ -15,6 +15,6 @@
 
   tasks:
     - name: check the which distribution for this server 
+      when: NAME == "Redhat"
       debug:
         msg: "{{ ansible_distribution}}"
-      when: NAME == "Redhat"
