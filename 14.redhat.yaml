@@ -1,0 +1,14 @@
+- name: check the distribution of the server
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: gathering facts for distribution
+      debug:
+        msg: this is redhat family need to run as dnf package manager
+      when: ansible_facts.os_famil == "Redhat"
+
+    - name: gathering facts for distribution of the server
+      debug:
+        msg: this is debian family need to run as apt package manager
+      when: ansible_facts.os_family == "Debian"
