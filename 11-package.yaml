@@ -5,8 +5,10 @@
   vars_files:
     - variables.yaml
 
-  vars:
-    NAME: "Redhat"
+  vars_prompt:
+  - name: NAME
+    prompt: enter the server distribution
+    private: no
 
   when: NAME == "Redhat"
 
@@ -14,4 +16,4 @@
   tasks:
     - name: check the which distribution for this server 
       debug:
-        msg: "{{ ansible_distribution.NAME }}"
+        msg: "{{ ansible_distribution}}"
