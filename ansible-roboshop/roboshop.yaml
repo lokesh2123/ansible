@@ -1,6 +1,5 @@
 - name: provisioning the infrastructure
   hosts: localhost
-  connection: local
 
   vars_files:
     - variables.yaml
