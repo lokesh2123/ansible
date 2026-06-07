@@ -1,5 +1,5 @@
 - name: provisioning the infrastructure
-  hosts: all
+  hosts: localhost
   connection: local
 
   vars:
