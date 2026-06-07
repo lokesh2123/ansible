@@ -1,7 +1,0 @@
-NAME: "variables"
-ROLE: "DevOps Engineer"
-NUMBER: 10
-EXP: 6
-
-ansible_user: "ec2-user"
-ansible_password: "DevOps321"
