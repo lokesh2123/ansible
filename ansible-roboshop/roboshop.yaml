@@ -1,5 +1,5 @@
 - name: provisioning the infrastructure
-  hosts: localhost
+  hosts: local
   connection: local
 
   vars:
@@ -18,7 +18,7 @@
     loop: "{{ instances }}"
     register: ec2_output
 
-  - name: print
+  - name: print the output
     debug:
       msg: "{{ ec2_output }}"
       
