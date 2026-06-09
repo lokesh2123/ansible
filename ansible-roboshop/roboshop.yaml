@@ -81,7 +81,7 @@
   - name: delete ec2 instances
     amazon.aws.ec2_instance:
       state: absent
-      name: "roboshop-{{ item }}"
+      name: "robo-{{ item }}"
       wait: false
     loop: "{{ instances  }}"  
     when: action == "delete"
