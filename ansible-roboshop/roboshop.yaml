@@ -1,6 +1,6 @@
 - name: provisioning the infrastructure
   hosts: local
-  connection: local
+  become: yes
 
   vars:
     instances: ["mongodb", "redis" ,"rabitmq" ,"mysqldb"]
