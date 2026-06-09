@@ -49,4 +49,5 @@
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
-    loop: "{{ ec2_output.results }}"  
+    loop: "{{ ec2_output.results }}"
+    when: item.item == "frontend"
