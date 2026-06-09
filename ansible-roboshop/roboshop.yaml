@@ -41,12 +41,12 @@
       value: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_output.results }}"
 
-  - name: update the oublic ip address
+  - name: update the public ip address
     amazon.aws.route53:
       state: present
       zone: "{{ domain_name }}"
       record: "{{ domain_name }}" # mongodb.lokesh23.online
       type: A
       ttl: 1
-      value: "{{ item.instances[0].public_ip_address }}"
+      value: "{{ public_ip_address }}"
     loop: "{{ ec2_output.results }}"  
