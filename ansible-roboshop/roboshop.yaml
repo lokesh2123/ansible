@@ -1,5 +1,6 @@
 - name: provisioning the infrastructure
   hosts: local
+  connection: true
   become: yes
 
   vars:
