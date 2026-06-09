@@ -21,6 +21,7 @@
         - robo-common 
     loop: "{{ instances }}"
     register: ec2_output
+    when: action == "create"
 
   # - name: print the output
   #   debug:
@@ -40,6 +41,7 @@
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_output.results }}"
+    when: action == "create"
 
   - name: update the public ip address
     amazon.aws.route53:
@@ -50,4 +52,36 @@
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
     loop: "{{ ec2_output.results }}"
-    when: item.item == "frontend"
+    when: 
+      - item.item == "frontend"
+      - action == "create"
+
+  - name: delete r53 records
+    amazon.aws.route53:
+      state: absent
+      zone: "{{ domain_name }}"
+      record: "{{ item }}.{{ domain_name }}" # mongodb.daws90s.shop
+      ttl: 1
+      type: A
+    loop: "{{ instances  }}"  
+    when: action == "delete"
+
+  - name: delete r53 record for frontend
+    amazon.aws.route53:
+      state: absent
+      zone: "{{ domain_name }}"
+      record: "{{ domain_name }}" # daws90s.shop
+      ttl: 1
+      type: A
+    loop: "{{ instances  }}"  
+    when: 
+    - action == "delete"
+    - item == "frontend"
+  
+  - name: delete ec2 instances
+    amazon.aws.ec2_instance:
+      state: absent
+      name: "roboshop-{{ item }}"
+      wait: false
+    loop: "{{ instances  }}"  
+    when: action == "delete"
