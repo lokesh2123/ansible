@@ -48,5 +48,5 @@
       record: "{{ domain_name }}" # mongodb.lokesh23.online
       type: A
       ttl: 1
-      value: "{{ public_ip_address }}"
+      value: "{{ item.instances[0].public_ip_address }}"
     loop: "{{ ec2_output.results }}"  
