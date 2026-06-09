@@ -3,6 +3,9 @@
   connection: local
   become: yes
 
+  vars_files:
+    - variables.yaml
+
   vars:
     instances: ["mongodb", "redis" ,"rabitmq" ,"mysqldb"]
     image_id: ami-0220d79f3f480ecf5
