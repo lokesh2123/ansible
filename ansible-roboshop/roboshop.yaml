@@ -12,10 +12,10 @@
     amazon.aws.ec2_instance:
       name: "robo-{{ item }}"
       instance_type: t3.micro
+      image_id: "{{ image_id }}"
       security_groups:
         - "robo-{{ item }}"
-        - robo-common
-      image_id: "{{ image_id }}"
+        - robo-common 
     loop: "{{ instances }}"
     register: ec2_output
 
